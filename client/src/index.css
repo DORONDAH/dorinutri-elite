@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface min-h-screen antialiased overflow-x-hidden selection:bg-primary/30;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, .serif {
+    font-family: 'Playfair Display', serif;
+  }
+
+  code, .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+.bio-mesh {
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 7, 5, 0.4) 0%,
+    rgba(5, 7, 5, 0.9) 100%
+  );
+}
+
+.center-command {
+  @apply min-h-screen w-full flex flex-col items-center justify-center relative z-10;
+}
+
+.vitality-widget {
+  @apply bg-surface-container/40 backdrop-blur-3xl border border-outline rounded-[3rem] p-12 shadow-2xl;
+  box-shadow: 0 0 0 1px rgba(0, 200, 83, 0.1), 0 30px 60px rgba(0,0,0,0.6);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
